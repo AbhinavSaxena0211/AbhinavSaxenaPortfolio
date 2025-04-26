@@ -1,4 +1,3 @@
-# AbhinavSaxenaPortfolio
 Overview
 This is a personal portfolio website created to showcase my skills, projects, education, and certifications. It reflects my journey as a Computer Science student and a web developer, aiming to highlight my technical expertise, creativity, and passion for building innovative solutions.
 
@@ -36,8 +35,6 @@ Libraries & Tools:
 
 Font Awesome (for icons)
 
-Vercel (for deployment) (optional if you host)
-
 How to Run Locally
 Clone the repository:
 
@@ -73,7 +70,7 @@ Integrate a working backend for the contact form (using PHP, Node.js, or Firebas
 
 Include a dark mode toggle for better user experience.
 
-More interactive animations using libraries like GSAP or AOS.
+Add more interactive animations using libraries like GSAP or AOS.
 
 Author
 Abhinav Saxena
