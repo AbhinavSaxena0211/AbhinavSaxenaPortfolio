@@ -75,7 +75,7 @@ const projects = [
     description:
       "Interactive web application for image editing: resizing, filtering, color adjustments.",
     technologies: ["HTML","CSS","JavaScript"],
-    github: "https://github.com/AbhinavSaxena0211/ImageManipulationApp", 
+    github: "https://github.com/AbhinavSaxena0211/Image-Manipulation-App", 
     live: "https://image-manipulation-seven.vercel.app/",
     image: "ImageManipulation.png"
   },
@@ -290,6 +290,7 @@ window.addEventListener('resize', () => {
 });
 
 animate();
+
 
 
 
