@@ -14,46 +14,39 @@
 .project-image {
   height: 200px;
   position: relative;
-  background-color: #eee;
+  background-color: #eee; 
   background-size: cover;        
-  background-position: center;  
+  background-position: center;   
   background-repeat: no-repeat;  
   border-radius: 15px 15px 0 0;  
-  overflow: hidden;            
+  overflow: hidden;              
 }
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 .project-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(155, 135, 245, 0.9);
+  background: rgba(0,0,0,0.6);  /* semi-transparent overlay */
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  pointer-events: none; /* hide clicks initially */
-  transition: var(--transition);
-  z-index: 5; /* above image */
+  transition: 0.3s ease;
+  pointer-events: none;
 }
 
 .project-card:hover .project-overlay {
   opacity: 1;
-  pointer-events: all; /* allow overlay & links to be clickable */
+  pointer-events: auto;  /* allow clicking on hover */
 }
 
 .project-links a {
-  pointer-events: auto; /* ensure links themselves are clickable */
-  z-index: 10; /* above overlay */
   color: white;
-  font-size: 28px;
-  margin: 0 15px;
-  transition: transform 0.3s;
+  font-size: 24px;
+  margin: 0 10px;
+  pointer-events: auto;  /* ensure links are clickable */
 }
 
 .project-links a:hover {
@@ -608,6 +601,7 @@ section {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
+
 
 
 
