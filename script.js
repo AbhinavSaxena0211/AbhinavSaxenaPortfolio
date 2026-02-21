@@ -144,7 +144,8 @@ function renderProjects() {
         <div class="project-overlay">
           <div class="project-links">
             <a href="https://github.com/AbhinavSaxena0211/BloodSyncApplication" class="project-link"><i class="fas fa-link"></i></a>
-            <a href="https://github.com/AbhinavSaxena0211/ImageManipulationApp" class="project-link"><i class="fab fa-github"></i></a>
+            <a href="https://image-manipulation-seven.vercel.app/" class="project-link"><i class="fab fa-vercel"></i></a>
+            <a href="https://weather-api-app-coral.vercel.app/" class="project-link"><i class="fab fa-vercel"></i></a>
           </div>
         </div>
       </div>
@@ -234,4 +235,5 @@ const animateOnScroll = () => {
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);
+
 
