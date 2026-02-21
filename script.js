@@ -77,7 +77,7 @@ const projects = [
     technologies: ["HTML","CSS","JavaScript"],
     github: "https://github.com/AbhinavSaxena0211/Image-Manipulation-App", 
     live: "https://image-manipulation-seven.vercel.app/",
-    image: "ImageManipulation.png"
+    image: "ImageManipulationApp.png"
   },
   {
     title: "Weather Forecast Web App",
@@ -290,6 +290,7 @@ window.addEventListener('resize', () => {
 });
 
 animate();
+
 
 
 
