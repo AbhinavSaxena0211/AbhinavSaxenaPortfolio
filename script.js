@@ -65,7 +65,7 @@ const projects = [
     title: "BloodSync",
     description:
       "Full-stack web application using Java, JDBC & MySQL. Secure user authentication, donor registration, and responsive UI.",
-    technologies: ["Java", "MySQL", "HTML", "CSS", "JavaScript"],
+    technologies: ["Java",",","MySQL",",", "HTML",",", "CSS",",", "JavaScript"],
     github: "https://github.com/AbhinavSaxena0211/BloodSyncApplication",
     live: "",
     image: "BloodSync.jpg"
@@ -74,19 +74,19 @@ const projects = [
     title: "Image Manipulation",
     description:
       "Interactive web application for image editing: resizing, filtering, color adjustments.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML",",", "CSS",",", "JavaScript"],
     github: "", 
     live: "https://image-manipulation-seven.vercel.app/",
-    image: "images/imagemanipulation.png"
+    image: "ImageManipulation.png"
   },
   {
     title: "Weather Forecast Web App",
     description: 
       "Weather Forecast Web Application with API integration, dynamic city search, error handling, responsive UI.",
-    technologies: ["HTML","CSS","JavaScript","REST APIs"],
+    technologies: ["HTML",",","CSS",",","JavaScript",",","REST APIs"],
     github: "", 
     live: "https://weather-api-app-coral.vercel.app/",
-    image: "images/weatherapp.png"
+    image: "WeatherApp.png"
   },
 ];
 
@@ -233,6 +233,7 @@ const animateOnScroll = () => {
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);
+
 
 
 
