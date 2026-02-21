@@ -24,11 +24,37 @@
   object-fit: cover;
 }
 .project-overlay {
-  pointer-events: none; /* Only overlay background is non-clickable */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(155, 135, 245, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none; /* hide clicks initially */
+  transition: var(--transition);
+  z-index: 5; /* above image */
 }
 
 .project-card:hover .project-overlay {
-  pointer-events: auto; /* Allow links to work on hover */
+  opacity: 1;
+  pointer-events: all; /* allow overlay & links to be clickable */
+}
+
+.project-links a {
+  pointer-events: auto; /* ensure links themselves are clickable */
+  z-index: 10; /* above overlay */
+  color: white;
+  font-size: 28px;
+  margin: 0 15px;
+  transition: transform 0.3s;
+}
+
+.project-links a:hover {
+  transform: scale(1.2);
 }
 
 :root {
@@ -579,6 +605,7 @@ section {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
+
 
 
 
