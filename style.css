@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-/* ================= GLOBAL RESET ================= */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -10,11 +10,10 @@
 :root {
   --primary-color: #9b87f5;
   --secondary-color: #7e69ab;
-  --accent-color: #6c63ff;
-  --text-color: #2d2d2d;
-  --light-text: #777;
-  --bg-color: #ffffff;
-  --section-bg: #f8f9ff;
+  --text-color: #333;
+  --light-text: #666;
+  --bg-color: #fff;
+  --section-bg: #f9f9f9;
   --header-height: 80px;
   --transition: all 0.3s ease;
 }
@@ -25,28 +24,29 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--text-color);
-  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
   overflow-x: hidden;
+  background: linear-gradient(135deg, #ffffff, #f3f4ff);
 }
 
 /* ================= CONTAINER ================= */
 .container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
 /* ================= HEADER ================= */
 .header {
   position: fixed;
-  width: 100%;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  backdrop-filter: blur(12px);
   background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
   transition: var(--transition);
 }
 
@@ -58,16 +58,21 @@ body {
 }
 
 .logo {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--primary-color);
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .nav-menu ul {
   display: flex;
   list-style: none;
-  gap: 35px;
+  gap: 30px;
 }
 
 .nav-menu a {
@@ -78,13 +83,17 @@ body {
   transition: var(--transition);
 }
 
+.nav-menu a:hover {
+  color: var(--primary-color);
+}
+
 .nav-menu a::after {
   content: "";
   position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -6px;
+  bottom: -5px;
   left: 0;
+  width: 0;
+  height: 2px;
   background: var(--primary-color);
   transition: var(--transition);
 }
@@ -100,23 +109,39 @@ body {
   padding-top: var(--header-height);
   display: flex;
   align-items: center;
-  text-align: center;
-  background: linear-gradient(135deg, #f6f8ff, #eef1ff);
+  position: relative;
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 
 .hero-content {
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .greeting {
-  font-size: 1.4rem;
+  display: block;
+  font-size: 1.5rem;
   color: var(--light-text);
+  margin-bottom: 10px;
 }
 
 .name {
@@ -124,200 +149,115 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   font-weight: 700;
+  animation: gradientMove 5s infinite linear;
+}
+
+@keyframes gradientMove {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
 }
 
 .hero-content h2 {
-  margin-bottom: 25px;
+  font-size: 1.5rem;
   color: var(--light-text);
+  margin-bottom: 20px;
 }
 
 /* ================= BUTTONS ================= */
 .btn {
   display: inline-block;
-  padding: 12px 32px;
+  padding: 12px 30px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 500;
-  transition: var(--transition);
+  transition: 0.3s ease;
   margin: 10px;
 }
 
 .btn-primary {
   background: var(--primary-color);
   color: white;
-  box-shadow: 0 5px 20px rgba(155, 135, 245, 0.4);
+  box-shadow: 0 6px 20px rgba(155, 135, 245, 0.4);
 }
 
 .btn-primary:hover {
-  background: var(--secondary-color);
   transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(155, 135, 245, 0.6);
 }
 
 .btn-secondary {
-  border: 2px solid var(--primary-color);
+  background: transparent;
   color: var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 
 .btn-secondary:hover {
   background: var(--primary-color);
   color: white;
-}
-
-/* ================= SOCIAL ICONS ================= */
-.social-links {
-  margin-top: 30px;
-}
-
-.social-link {
-  display: inline-block;
-  width: 42px;
-  height: 42px;
-  line-height: 42px;
-  border-radius: 50%;
-  background: white;
-  color: var(--primary-color);
-  margin: 0 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  transition: var(--transition);
-}
-
-.social-link:hover {
-  background: var(--primary-color);
-  color: white;
   transform: translateY(-4px);
 }
 
-/* ================= SECTIONS ================= */
-section {
-  padding: 100px 0;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* ================= CARDS ================= */
+/* ================= CARDS ENHANCED ================= */
 .project-card,
 .certification-card,
 .highlight-box {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: var(--transition);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .project-card:hover,
 .certification-card:hover,
 .highlight-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
 }
 
-/* ================= GRID SYSTEM ================= */
-.projects-grid,
-.certifications-grid,
-.skills-container {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+/* ================= IMAGES ZOOM ================= */
+.certification-image img,
+.project-image img {
+  transition: transform 0.5s ease;
+}
+
+.certification-card:hover img,
+.project-card:hover img {
+  transform: scale(1.08);
 }
 
 /* ================= FORM ================= */
-.contact-form {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
 .form-group input,
 .form-group textarea {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid #eee;
-  border-radius: 8px;
-  transition: var(--transition);
+  transition: 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 10px rgba(155, 135, 245, 0.2);
-  outline: none;
+  box-shadow: 0 0 15px rgba(155, 135, 245, 0.2);
+  transform: scale(1.02);
+}
+
+/* ================= SCROLL BUTTON ================= */
+.scroll-top {
+  transition: all 0.4s ease;
+}
+
+.scroll-top:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(155, 135, 245, 0.4);
 }
 
 /* ================= FOOTER ================= */
 .footer {
-  background: #1f2335;
+  background: #1a1f2c;
   color: white;
   text-align: center;
   padding: 30px 0;
 }
 
-/* ================= SCROLL BUTTON ================= */
-.scroll-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background: var(--primary-color);
-  color: white;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(100px);
-  transition: var(--transition);
+.heart {
+  animation: heartbeat 1.5s infinite;
 }
 
-.scroll-top.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================= ANIMATION ================= */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s ease;
-}
-
-.animate-on-scroll.animated {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.4rem;
-  }
-
-  .about-content,
-  .contact-content {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: var(--header-height);
-    left: 0;
-    width: 100%;
-    background: white;
-    padding: 20px;
-    transform: translateY(-100%);
-    transition: var(--transition);
-  }
-
-  .nav-menu.active {
-    transform: translateY(0);
-  }
-
-  .nav-menu ul {
-    flex-direction: column;
-    gap: 15px;
-  }
+@keyframes heartbeat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
 }
