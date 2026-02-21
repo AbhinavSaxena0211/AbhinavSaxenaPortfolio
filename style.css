@@ -105,7 +105,7 @@ body {
   height: 100%;
   z-index: -1; /* behind everything */
   pointer-events: none; /* so clicks pass through */
-  background: linear-gradient(135deg, #2563eb, #06b6d4); /* nice gradient */
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
 }
 
 .logo {
@@ -613,6 +613,7 @@ section {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
+
 
 
 
