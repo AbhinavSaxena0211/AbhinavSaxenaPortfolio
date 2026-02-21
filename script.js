@@ -68,7 +68,7 @@ const projects = [
     technologies: ["Java", "MySQL", "HTML", "CSS", "JavaScript"],
     github: "https://github.com/AbhinavSaxena0211/BloodSyncApplication",
     live: "",
-    image: "images/bloodsync.png" // <-- add your project image path
+    image: "BloodSync.jpg"
   },
   {
     title: "Image Manipulation",
@@ -233,5 +233,6 @@ const animateOnScroll = () => {
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);
+
 
 
