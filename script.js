@@ -83,6 +83,12 @@ const projects = [
       "Developed an interactive web application for image editing, including resizing, filtering, and color adjustments.",
     technologies: ["HTML", ",", "CSS", ",", "JavaScript"],
   },
+  {
+    title: "Weather Forecast Web App(API Integration Project)",
+    description: 
+      "Developed a Weather Forecast Web Application using HTML, CSS, and JavaScript by integrating REST APIs to fetch real-time weather data. Implemented dynamic city search, error handling, and responsive UI to enhance user experience.",
+    technologies: ["HTML",",","CSS",",","JavaScript",",","RESTAPIs"],
+  },
 ];
 
 const skills = [
@@ -228,3 +234,4 @@ const animateOnScroll = () => {
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);
+
