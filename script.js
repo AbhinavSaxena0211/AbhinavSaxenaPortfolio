@@ -139,7 +139,7 @@ function renderProjects() {
     .map(
       (project) => `
     <div class="project-card">
-      <div class="project-image" style="background-image: url('${project.image}'); background-size: cover; background-position: center;">
+      <div class="project-image" style="background-image: url('${project.image || 'default.jpg'}'); background-size: cover; background-position: center;">
         <div class="project-overlay">
           <div class="project-links">
             ${project.github ? `<a href="${project.github}" target="_blank" class="project-link"><i class="fas fa-link"></i></a>` : ""}
@@ -158,6 +158,11 @@ function renderProjects() {
   `
     )
     .join("");
+  document.querySelectorAll('.project-links a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.stopPropagation(); 
+    });
+  });
 }
 
 function renderSkills() {
@@ -233,6 +238,7 @@ const animateOnScroll = () => {
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);
+
 
 
 
