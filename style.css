@@ -14,9 +14,12 @@
 .project-image {
   height: 200px;
   position: relative;
-  background-color: #eee; /* fallback */
-  border-radius: 15px 15px 0 0;
-  overflow: hidden;
+  background-color: #eee;
+  background-size: cover;        
+  background-position: center;  
+  background-repeat: no-repeat;  
+  border-radius: 15px 15px 0 0;  
+  overflow: hidden;            
 }
 .project-image img {
   width: 100%;
@@ -605,6 +608,7 @@ section {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
+
 
 
 
