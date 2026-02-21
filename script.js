@@ -64,36 +64,29 @@ const projects = [
   {
     title: "BloodSync",
     description:
-      "Developed a full-stack web application using Java (Servlets, JDBC) and MySQL for backend functionality. Implemented secure user authentication, donor registration, and request matching. Designed a responsive UI using HTML, CSS, and JavaScript to enhance user interaction and experience.",
-    technologies: [
-      "Java (Servlets, JDBC)",
-      ",",
-      "MySQL",
-      ",",
-      "HTML",
-      ",",
-      "CSS",
-      ",",
-      "JavaScript",
-    ],
+      "Full-stack web application using Java, JDBC & MySQL. Secure user authentication, donor registration, and responsive UI.",
+    technologies: ["Java", "MySQL", "HTML", "CSS", "JavaScript"],
     github: "https://github.com/AbhinavSaxena0211/BloodSyncApplication",
-    live: ""
+    live: "",
+    image: "images/bloodsync.png" // <-- add your project image path
   },
   {
     title: "Image Manipulation",
     description:
-      "Developed an interactive web application for image editing, including resizing, filtering, and color adjustments.",
-    technologies: ["HTML", ",", "CSS", ",", "JavaScript"],
+      "Interactive web application for image editing: resizing, filtering, color adjustments.",
+    technologies: ["HTML", "CSS", "JavaScript"],
     github: "", 
-    live: "https://image-manipulation-seven.vercel.app/"
+    live: "https://image-manipulation-seven.vercel.app/",
+    image: "images/imagemanipulation.png"
   },
   {
-    title: "Weather Forecast Web App(API Integration Project)",
+    title: "Weather Forecast Web App",
     description: 
-      "Developed a Weather Forecast Web Application using HTML, CSS, and JavaScript by integrating REST APIs to fetch real-time weather data. Implemented dynamic city search, error handling, and responsive UI to enhance user experience.",
-    technologies: ["HTML",",","CSS",",","JavaScript",",","RESTAPIs"],
-     github: "", 
-    live: "https://weather-api-app-coral.vercel.app/"
+      "Weather Forecast Web Application with API integration, dynamic city search, error handling, responsive UI.",
+    technologies: ["HTML","CSS","JavaScript","REST APIs"],
+    github: "", 
+    live: "https://weather-api-app-coral.vercel.app/",
+    image: "images/weatherapp.png"
   },
 ];
 
@@ -146,12 +139,12 @@ function renderProjects() {
     .map(
       (project) => `
     <div class="project-card">
-      <div class="project-image">
+      <div class="project-image" style="background-image: url('${project.image}'); background-size: cover; background-position: center;">
         <div class="project-overlay">
           <div class="project-links">
-  ${project.github ? `<a href="${project.github}" target="_blank" class="project-link"><i class="fas fa-link"></i></a>` : ""}
-  ${project.live ? `<a href="${project.live}" target="_blank" class="project-link"><i class="fab fa-vercel"></i></a>` : ""}
-</div>
+            ${project.github ? `<a href="${project.github}" target="_blank" class="project-link"><i class="fas fa-link"></i></a>` : ""}
+            ${project.live ? `<a href="${project.live}" target="_blank" class="project-link"><i class="fab fa-vercel"></i></a>` : ""}
+          </div>
         </div>
       </div>
       <div class="project-content">
@@ -240,4 +233,5 @@ const animateOnScroll = () => {
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);
+
 
