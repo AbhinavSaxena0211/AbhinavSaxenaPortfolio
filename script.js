@@ -139,14 +139,15 @@ function renderProjects() {
     .map(
       (project) => `
     <div class="project-card">
-      <div class="project-image" style="background-image: url('${project.image}');">
-        <div class="project-overlay">
-          <div class="project-links">
-            ${project.github ? `<a href="${project.github}" target="_blank" class="project-link"><i class="fab fa-github"></i></a>` : ""}
-            ${project.live ? `<a href="${project.live}" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>` : ""}
-          </div>
-        </div>
-      </div>
+      <div class="project-image">
+  <img src="${project.image}" alt="${project.title}">
+  <div class="project-overlay">
+    <div class="project-links">
+      ${project.github ? `<a href="${project.github}" target="_blank" class="project-link"><i class="fab fa-github"></i></a>` : ""}
+      ${project.live ? `<a href="${project.live}" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>` : ""}
+    </div>
+  </div>
+</div>
       <div class="project-content">
         <h3 class="project-title">${project.title}</h3>
         <p class="project-description">${project.description}</p>
@@ -236,6 +237,7 @@ const animateOnScroll = () => {
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);
+
 
 
 
