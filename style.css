@@ -4,7 +4,21 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Portfolio Weather-App Style Background */
+.project-links a {
+  pointer-events: auto; /* Allow clicking the icons */
+  z-index: 10; /* Make sure they're above the overlay */
+  color: white;
+  font-size: 28px;
+  margin: 0 15px;
+}
+
+.project-overlay {
+  pointer-events: none; /* Only overlay background is non-clickable */
+}
+
+.project-card:hover .project-overlay {
+  pointer-events: auto; /* Allow links to work on hover */
+}
 
 :root {
   --primary-color: #2563eb;     
@@ -554,6 +568,7 @@ section {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
+
 
 
 
