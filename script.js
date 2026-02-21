@@ -75,7 +75,7 @@ const projects = [
     description:
       "Interactive web application for image editing: resizing, filtering, color adjustments.",
     technologies: ["HTML",",", "CSS",",", "JavaScript"],
-    github: "", 
+    github: "https://github.com/AbhinavSaxena0211/ImageManipulationApp", 
     live: "https://image-manipulation-seven.vercel.app/",
     image: "ImageManipulation.png"
   },
@@ -84,7 +84,7 @@ const projects = [
     description: 
       "Weather Forecast Web Application with API integration, dynamic city search, error handling, responsive UI.",
     technologies: ["HTML",",","CSS",",","JavaScript",",","REST APIs"],
-    github: "", 
+    github: "https://github.com/AbhinavSaxena0211/Weather-Api-App", 
     live: "https://weather-api-app-coral.vercel.app/",
     image: "WeatherApp.png"
   },
@@ -238,6 +238,7 @@ const animateOnScroll = () => {
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);
+
 
 
 
