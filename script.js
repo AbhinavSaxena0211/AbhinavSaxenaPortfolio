@@ -64,30 +64,24 @@ const projects = [
   {
     title: "BloodSync",
     description:
-      "Developed a full-stack web application using Java (Servlets, JDBC) and MySQL for backend functionality. Implemented secure user authentication, donor registration, and request matching. Designed a responsive UI using HTML, CSS, and JavaScript to enhance user interaction and experience.",
-    technologies: [
-      "Java (Servlets, JDBC)",
-      ",",
-      "MySQL",
-      ",",
-      "HTML",
-      ",",
-      "CSS",
-      ",",
-      "JavaScript",
-    ],
+      "Developed a full-stack web application using Java (Servlets, JDBC) and MySQL...",
+    technologies: ["Java (Servlets, JDBC)", "MySQL", "HTML", "CSS", "JavaScript"],
+    github: "https://github.com/AbhinavSaxena0211/BloodSyncApplication",
+    live: "" // no live site yet
   },
   {
     title: "Image Manipulation",
-    description:
-      "Developed an interactive web application for image editing, including resizing, filtering, and color adjustments.",
-    technologies: ["HTML", ",", "CSS", ",", "JavaScript"],
+    description: "Developed an interactive web application for image editing...",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    github: "", 
+    live: "https://image-manipulation-seven.vercel.app/"
   },
   {
     title: "Weather Forecast Web App(API Integration Project)",
-    description: 
-      "Developed a Weather Forecast Web Application using HTML, CSS, and JavaScript by integrating REST APIs to fetch real-time weather data. Implemented dynamic city search, error handling, and responsive UI to enhance user experience.",
-    technologies: ["HTML",",","CSS",",","JavaScript",",","RESTAPIs"],
+    description: "Developed a Weather Forecast Web Application using HTML, CSS...",
+    technologies: ["HTML","CSS","JavaScript","RESTAPIs"],
+    github: "", 
+    live: "https://weather-api-app-coral.vercel.app/"
   },
 ];
 
@@ -235,5 +229,6 @@ const animateOnScroll = () => {
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);
+
 
 
