@@ -65,7 +65,7 @@ const projects = [
     title: "BloodSync",
     description:
       "Full-stack web application using Java, JDBC & MySQL. Secure user authentication, donor registration, and responsive UI.",
-    technologies: ["Java (Servlets,JDBC)",",","MySQL",",", "HTML",",", "CSS",",", "JavaScript"],
+    technologies: ["Java (Servlets,JDBC)","MySQL", "HTML", "CSS", "JavaScript"],
     github: "https://github.com/AbhinavSaxena0211/BloodSyncApplication",
     live: "",
     image: "BloodSync.jpg"
@@ -152,8 +152,8 @@ function renderProjects() {
         <h3 class="project-title">${project.title}</h3>
         <p class="project-description">${project.description}</p>
         <div class="project-tech">
-          ${project.technologies.map((tech) => `<span>${tech}</span>`).join("")}
-        </div>
+  ${project.technologies.map((tech, index) => `<span>${tech}${index < project.technologies.length - 1 ? ', ' : ''}</span>`).join("")}
+</div>
       </div>
     </div>
   `
@@ -237,6 +237,7 @@ const animateOnScroll = () => {
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);
+
 
 
 
