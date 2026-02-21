@@ -65,7 +65,7 @@ const projects = [
     title: "BloodSync",
     description:
       "Full-stack web application using Java, JDBC & MySQL. Secure user authentication, donor registration, and responsive UI.",
-    technologies: ["Java (Servlets,JDBC)","MySQL", "HTML", "CSS", "JavaScript"],
+    technologies: ["Java (Servlets,JDBC)","MySQL","HTML","CSS","JavaScript"],
     github: "https://github.com/AbhinavSaxena0211/BloodSyncApplication",
     live: "",
     image: "BloodSync.jpg"
@@ -237,6 +237,7 @@ const animateOnScroll = () => {
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);
+
 
 
 
